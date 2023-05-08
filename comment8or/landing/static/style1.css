@@ -1,0 +1,81 @@
+  h3{
+    position:absolute;
+    top:120px;
+    left:200px;
+    }
+    img{
+    width:15%
+    }
+    h6{
+    position:absolute;
+    top:120px;
+    left:620px;
+    }
+    .img1{
+    width:69%;
+    position:absolute;
+    top:180px;
+    left:200px;
+    }
+    .img2{
+    width:82%;
+    position:absolute;
+    top:180px;
+    left:380px;
+    }
+    .img3{
+    width:82%;
+    position:absolute;
+    top:180px;
+    left:580px;
+    }
+    .img4{
+    width:82%;
+    position:absolute;
+    top:180px;
+    left:780px;
+    }
+    .img5{
+    width:150%;
+    position:absolute;
+    top:380px;
+    left:620px;
+    }
+    input[type=text] {
+    width: 400px;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-left:800px;
+    font-size: 17px;
+    }
+    .oby{
+    position:absolute;
+    top: 73px;
+    left:1300px;
+    }
+    .a{
+    position: absolute;
+    top:410px;
+    left:200px;
+    }
+    .b{
+    position: absolute;
+    top:410px;
+    left:300px;
+    }
+    .c{
+    position: absolute;
+    top:410px;
+    left:410px;
+    }
+    .gorod{
+    position: absolute;
+    top:250px;
+
+    }
+    .forms{
+    position:absolute;
+    bottom: 100px;
+    left: 1100px;
+    }

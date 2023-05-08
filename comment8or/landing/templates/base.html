@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'style.css' %}"
+ rel="stylesheet">
+    <title>Title</title>
+
+</head>
+<body>
+ <nav>
+      <a href="/sb/" class="logo" style="font-family: Verdana;">Koleso Group</a>
+      <ul>
+
+        <li><a href="#">New Auto</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href='/success/'>Cars</a></li>
+        <li><a href="/logins/">Login</a></li>
+
+      </ul>
+    </nav>
+  <form action="{% url 'submit_form' %}" method="post">
+        {% csrf_token %}
+    <h1>Registration</h1>
+    <label style="font-weight: bold;" for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label style="font-weight: bold;" for="password">Password:</label>
+    <input type="text" id="password" name="password" required>
+
+    <input type="checkbox" id="scales" name="scales" checked>
+    <label for="scales">I agree with politics of the website</label>
+
+      <input type="submit" value="Submit">
+  </form>
+
+  <div>
+
+  </div>
+</body>
+</html>
