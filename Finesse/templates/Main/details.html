@@ -1,0 +1,109 @@
+
+<!Doctype html>
+{% load static %}
+<html lang ="en">
+   <head>
+      <meta charset = "UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Finesse</title>
+
+      <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+   </head>
+
+   <body>
+      <header>
+         <a href = "main.html" class="logo">
+            <span>Finesse</span>
+         </a>
+
+         <form action="" class="search-form">
+            <input type="search" name="" placeholder="Search" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+         </form>
+
+         <div class="icons">
+            <a href="login.html" class="login-btn"><i class='bx bx-user' ></i></a>
+            <a href="cart.html" class="cart"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 14 14"><path fill="none" stroke="#3b3b3b" stroke-linecap="round" stroke-linejoin="round" d="M12.28 6H1.72a1 1 0 0 0-1 1.2l1.1 5.5a1 1 0 0 0 1 .8h8.36a1 1 0 0 0 1-.8l1.1-5.5a1 1 0 0 0-1-1.2ZM9 2.5L11 6M3 6l2-3.5"/></svg></a>
+         </div>
+      </header>
+
+
+      <section class="prodetails" id="prodetails">
+         <div class="single-pro-image">
+            <img src="img/img of cloth.png" alt="" width="100%" id="MainImg">
+
+            <div class="small-img-group">
+               <div class="small-img-col">
+                  <img src="img/img of cloth.png" alt="" width="100%" class="small-img">
+               </div>
+               <div class="small-img-col">
+                  <img src="img/img of cloth.png" alt="" width="100%" class="small-img">
+               </div>
+            </div> 
+
+         </div>
+
+         <div class="single-pro-details">
+            <h5 class="path">home/woman</h5>
+            <h2 class="title">КАРДИГАН OYDIE</h2>
+            <h5 class="price">15 000 KZT</h5>
+            <!-- <select>
+               <option>Select size</option>
+               <option>XS</option>
+               <option>S</option>
+               <option>M</option>
+            </select> -->
+
+            <button class="size">S</button>
+            <button class="size">M</button>
+            <button class="size">L</button>
+            <input type="number" value="1">
+            <button class="btn">Add to Cart</button>
+            <h2 class="Product_header">Product Details</h2>
+            <span class="product_details">The КАРДИГАН OYDIE is a stylish and versatile cardigan that will elevate your wardrobe with its timeless appeal. Crafted with utmost care and attention to detail, this cardigan combines comfort and fashion effortlessly.
+               Made from high-quality materials, the КАРДИГАН OYDIE offers a soft and cozy feel against the skin. The fabric blend ensures durability and warmth, making it suitable for various seasons and occasions.
+            </span>
+
+
+         </div>
+      </section>
+      
+<section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h2>Finesse</h2>
+               <p>Finesse is your ultimate destination for stylish and trendy clothing for both men and women. At Finesse, we understand that fashion is not just about the clothes you wear, but also about how you feel when you wear them. That's why we are dedicated to curating a collection that not only looks great but also makes you feel confident and comfortable.</p>
+            </div>
+
+
+            <div class="box">
+               <h3>Contact us</h3>
+               <a href=""><i class="fa-regular fa-phone"></i>+255 752 186 174</a>
+               <a href=""><i class="fa-sharp fa-regular fa-message"></i>lisajocktan@gmail.com</a>
+               <a href=""><i class="fa-regular fa-location-dot"></i>Kijitonyama</a>
+            </div>
+
+            <div class="box">
+               <h3>About us</h3>
+               <a href="">Support</a>
+               <a href="">Privacy & Policy</a>
+               
+            </div>
+         </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script src="script.js"></script>
+   </body>
+
+</html>

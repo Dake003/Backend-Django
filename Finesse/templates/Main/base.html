@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang ="en">
+   <head>
+       {% load static %}
+
+      <meta charset = "UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Finesse</title>
+
+      <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+   </head>
+
+   <body>
+      <header>
+         <a href = "main.html" class="logo">
+            <span>Finesse</span>
+         </a>
+
+         <form action="" class="search-form" METHOD="GET">
+            <input type="search" name="" placeholder="Search" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+         </form>
+
+         <div class="icons">
+            <a href="{% url 'loginpage' %}" class="login-btn"><i class='bx bx-user' ></i></a>
+            <a href="{% url 'cartpage' %}" class="cart"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 14 14"><path fill="none" stroke="#3b3b3b" stroke-linecap="round" stroke-linejoin="round" d="M12.28 6H1.72a1 1 0 0 0-1 1.2l1.1 5.5a1 1 0 0 0 1 .8h8.36a1 1 0 0 0 1-.8l1.1-5.5a1 1 0 0 0-1-1.2ZM9 2.5L11 6M3 6l2-3.5"/></svg></a>
+         </div>
+      </header>
+      {% block content %}
+      <div class="nav">
+         <nav class="navbar">
+            <a href="{% url 'man' %}">Man</a>
+            <a href="{% url 'woman' %}">Woman</a>
+         </nav>
+      </div>
+
+      <!-- Hero page starts -->
+      <section class="home">
+            <div class="content">
+               <h3>Fashion with finesse, only a click away.</h3>
+               <a href="{% url 'main' %}" class="btn">shop now</a>
+            </div>
+
+
+      </section>
+      <!-- Hero section ends -->
+
+      <section class="lastViewed">
+         <h3 class="header">You recently watched</h3>
+         <div class="swiper cloth-slider">
+               <div class="swiper-wrapper">
+
+<!--                  here-->
+                  <a href="#" class="swiper-slide"><img src="{% static 'assets/img/img of cloth.png' %}" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="{% static 'assets/img/img of cloth.png' %}" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="{% static 'assets/img/img of cloth.png' %}" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="{% static 'assets/img/img of cloth.png' %}" alt=""></a>
+                  <a href="#" class="swiper-slide"><img src="{% static 'assets/img/img of cloth.png' %}" alt=""></a>
+               </div>
+            </div>
+      </section>
+
+      <section class="bestseller">
+
+         <h3 class="header">Bestseller</h3>
+
+         <div class="swiper bestseller-slider">
+
+            <div class="swiper-wrapper">
+<!--                  here-->
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/knit_dress.jpeg' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">КАРДИГАН OYDIE</h3>
+                     <div class="price">20 000KZT</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+
+
+<!--                  here-->
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/hmgoepprod.jpeg' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+
+
+<!--                  here-->
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/krosses.webp' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+<!--                  here-->
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/pants.jpeg' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+<!--                  here-->
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/linenshirt.jpeg' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+
+
+         </div>
+
+
+
+
+         <div class="swiper bestseller-slider">
+
+            <div class="swiper-wrapper">
+<!--                  here-->
+
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/polo_shirt.jpeg' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+
+
+<!--                  here-->
+
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/sandals.webp' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+<!--                  here-->
+
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/sapogi.webp' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+<!--                  here-->
+
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/puff-sleeved_dress.jpeg' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+                  </div>
+               </a>
+
+<!--                  here-->
+
+               <a href="" class="swiper-slide box">
+                  <div class="image">
+                     <img src="{% static 'Clothes_images/img/sweatshirt.jpeg' %}" alt="">
+                  </div>
+                  <div class="content">
+                     <h3 class="title">new arrivals</h3>
+                     <div class="price">$15.90</div>
+                     <div class="additional">
+                        <span class="star">4,9</span>
+                        <i class="far fa-star"></i>
+                        <span class="review">(20)</span>
+                     </div>
+
+                  </div>
+               </a>
+            </div>
+
+         </div>
+      </section>
+      {% endblock %}
+      <section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h2>Finesse</h2>
+               <p>Finesse is your ultimate destination for stylish and trendy clothing for both men and women. At Finesse, we understand that fashion is not just about the clothes you wear, but also about how you feel when you wear them. That's why we are dedicated to curating a collection that not only looks great but also makes you feel confident and comfortable.</p>
+            </div>
+
+
+            <div class="box">
+               <h3>Contact us</h3>
+               <a href=""><i class="fa-regular fa-phone"></i>+255 752 186 174</a>
+               <a href=""><i class="fa-sharp fa-regular fa-message"></i>lisajocktan@gmail.com</a>
+               <a href=""><i class="fa-regular fa-location-dot"></i>Kijitonyama</a>
+            </div>
+
+            <div class="box">
+               <h3>About us</h3>
+               <a href="">Support</a>
+               <a href="">Privacy & Policy</a>
+
+            </div>
+         </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script src="{% static 'assets/script.js' %}"></script>
+   </body>
+
+</html>
