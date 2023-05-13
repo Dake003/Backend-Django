@@ -1,0 +1,211 @@
+<!Doctype html>
+{% load static %}
+<html lang ="en">
+   <head>
+      <meta charset = "UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Finesse</title>
+      <link rel="stylesheet" href="{% static 'assets/style.css' %}">
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+      <style>
+         #prodetails{
+   display: flex;
+
+}
+
+#prodetails .single-pro-image{
+   width: 40%;
+}
+
+.small-img-group{
+   display: flex;
+   justify-content: space-between;
+   gap: 2rem;
+
+}
+
+
+.small-img-col{
+   cursor: pointer;
+   padding-top: 2rem;
+   flex: 1;
+}
+
+#prodetails .single-pro-details{
+   width: 50%;
+   padding-left: 8rem;
+}
+
+#prodetails .single-pro-details .path{
+   font-size: 2rem;
+   padding-bottom: 1.8rem;
+   font-weight: 600;
+}
+
+
+#prodetails .single-pro-details .title{
+   font-weight: lighter;
+   font-size: 3.5rem;
+   padding-bottom: 1.8rem;
+}
+
+#prodetails .single-pro-details .price{
+   font-size: 2rem;
+   padding-bottom: 1.8rem;
+   font-weight: 600;
+}
+
+
+
+#prodetails .single-pro-details input{
+   width: 5rem;
+   height: 5rem;
+   padding-left: 1rem;
+   margin-right: 1rem;
+   /* border: var(--border); */
+
+}
+
+
+
+
+#prodetails .single-pro-details .Product_header{
+   font-size: 2rem;
+   font-weight: 400;
+   padding-bottom: 1.8rem;
+
+}
+
+#prodetails .single-pro-details .product_details{
+   font-weight: 300;
+   font-size: 1.5rem;
+   line-height: 150%;
+
+}
+
+#prodetails .single-pro-details .btn{
+   margin-top: 4rem;
+   display: block;
+   width: 100%;
+   padding: 1rem 9rem;
+   background-color: var(--addit);
+   color: var(--black);
+   font-size: 2.5rem;
+   cursor: pointer;
+   font-weight: normal;
+   text-align: center;
+   margin-bottom: 8rem;
+}
+
+#prodetails .single-pro-details input:focus{
+   outline: none;
+}
+
+#prodetails .single-pro-details .size{
+   background-color: var(--addit);
+   margin-right: 1rem;
+   padding: 2.6rem;
+   cursor: pointer;
+   margin-top: 2rem;
+
+}
+
+      </style>
+   </head>
+
+   <body>
+
+      <header>
+         <a href = "/" class="logo">
+            <span>Finesse</span>
+         </a>
+
+         <form action="" class="search-form">
+            <input type="search" name="" placeholder="Search" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+         </form>
+
+         <div class="icons">
+            <a href="login.html" class="login-btn"><i class='bx bx-user' ></i></a>
+            <a href="/cartpage/" class="cart"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 14 14"><path fill="none" stroke="#3b3b3b" stroke-linecap="round" stroke-linejoin="round" d="M12.28 6H1.72a1 1 0 0 0-1 1.2l1.1 5.5a1 1 0 0 0 1 .8h8.36a1 1 0 0 0 1-.8l1.1-5.5a1 1 0 0 0-1-1.2ZM9 2.5L11 6M3 6l2-3.5"/></svg></a>
+         </div>
+      </header>
+
+
+      <section class="prodetails" id="prodetails">
+         <div class="single-pro-image">
+            <img src="{{ get_clothes.image.url }}" alt="" width="100%" id="MainImg">
+
+            <div class="small-img-group">
+               <div class="small-img-col">
+                  <img src="{{ get_clothes.image.url }}" alt="" width="100%" class="small-img">
+               </div>
+               <div class="small-img-col">
+                  <img src="{{ get_clothes.image.url }}" alt="" width="100%" class="small-img">
+               </div>
+            </div>
+
+         </div>
+
+         <div class="single-pro-details">
+            <h5 class="path">home/woman</h5>
+            <h2 class="title">{{get_clothes.name}}</h2>
+            <h5 class="price">${{get_clothes.price}}</h5>
+            <!-- <select>
+               <option>Select size</option>
+               <option>XS</option>
+               <option>S</option>
+               <option>M</option>
+            </select> -->
+
+            <button class="size">S</button>
+            <button class="size">M</button>
+            <button class="size">L</button>
+            <input type="number" value="1">
+            <button class="btn">Add to Cart</button>
+            <h2 class="Product_header">Product Details</h2>
+            <span class="product_details">{{get_clothes.description}}</span>
+
+
+         </div>
+      </section>
+
+<section class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h2>Finesse</h2>
+               <p>Finesse is your ultimate destination for stylish and trendy clothing for both men and women. At Finesse, we understand that fashion is not just about the clothes you wear, but also about how you feel when you wear them. That's why we are dedicated to curating a collection that not only looks great but also makes you feel confident and comfortable.</p>
+            </div>
+
+
+            <div class="box">
+               <h3>Contact us</h3>
+               <a href=""><i class="fa-regular fa-phone"></i>+255 752 186 174</a>
+               <a href=""><i class="fa-sharp fa-regular fa-message"></i>lisajocktan@gmail.com</a>
+               <a href=""><i class="fa-regular fa-location-dot"></i>Kijitonyama</a>
+            </div>
+
+            <div class="box">
+               <h3>About us</h3>
+               <a href="">Support</a>
+               <a href="">Privacy & Policy</a>
+
+            </div>
+         </div>
+      </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script src="script.js"></script>
+   </body>
+
+</html>
